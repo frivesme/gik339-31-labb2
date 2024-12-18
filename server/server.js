@@ -41,3 +41,4 @@ const sqlite3 = require("sqlite3").verbose();
 //Testa backend
 
 //Uppgift 5
+//Skapar mappen klient och filerna där i

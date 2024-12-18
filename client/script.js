@@ -1,3 +1,4 @@
+const container = document.getElementById("container");
 //Uppgift 6
 const url = "http://localhost:3000/users";
 fetch(url)
@@ -14,11 +15,11 @@ fetch(url)
     jsonData.forEach((user) => {
       const html = `
       <ul id = "newUl" style= "background-color: ${user.color}">
-        <p>${user.firstName} ${user.lastName} ${user.username} </p>
+        <p>Name: ${user.firstName} ${user.lastName} <br> Username: ${user.username} </p>
        
       </ul>`;
 
-      document.body.insertAdjacentHTML("beforeend", html);
+      document.body.firstElementChild.insertAdjacentHTML("beforeend", html);
       console.log(jsonData);
     });
   });
