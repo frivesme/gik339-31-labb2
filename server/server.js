@@ -1,6 +1,5 @@
 console.log("Node-server");
 
-//Uppgift 2
 const express = require("express");
 const server = express();
 
@@ -19,9 +18,6 @@ server.listen(3000, () => {
 });
 
 server.get("/users", (req, res) => {
-  //(uppgift 3) Hämta data för att skicka som svar vid GET-förfrågan
-
-  //Skapar en koppling till dabasfilen /gik339-labb2.db
   const db = new sqlite3.Database("./gik339-labb2.db");
   const sql = "SELECT * FROM users";
   db.all(sql, (err, rows) => {
@@ -34,11 +30,4 @@ server.get("/users", (req, res) => {
   db.close();
 });
 
-//Uppgift 3
 const sqlite3 = require("sqlite3").verbose();
-
-//Uppgift 4
-//Testa backend
-
-//Uppgift 5
-//Skapar mappen klient och filerna där i

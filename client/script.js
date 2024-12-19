@@ -1,5 +1,5 @@
 const container = document.getElementById("container");
-//Uppgift 6
+
 const url = "http://localhost:3000/users";
 fetch(url)
   .then((response) => {
@@ -7,7 +7,6 @@ fetch(url)
     return response.json();
   })
   .then((jsonData) => {
-    //Uppgift 7
     const newUl = document.createElement("ul");
 
     jsonData.forEach((user) => {
