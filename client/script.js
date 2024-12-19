@@ -10,13 +10,10 @@ fetch(url)
     //Uppgift 7
     const newUl = document.createElement("ul");
 
-    //newUl.id = "newUl";
-
     jsonData.forEach((user) => {
       const html = `
       <ul id = "newUl" style= "background-color: ${user.color}">
-        <p>Name: ${user.firstName} ${user.lastName} <br> Username: ${user.username} </p>
-       
+        <p>Name: ${user.firstName} ${user.lastName} <br> Username: ${user.username} </p>       
       </ul>`;
 
       document.body.firstElementChild.insertAdjacentHTML("beforeend", html);
